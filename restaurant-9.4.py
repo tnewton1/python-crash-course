@@ -10,10 +10,15 @@ class Restaraunt:
 
     def set_number_served(self, number_served):
         number_served = self.number_served
+    
+    def increment_number_served(self, additional_served):
+        self.number_served += additional_served
 
 
 restaraunt = Restaraunt("McDonalds", "Fast Food")
 restaraunt.describe_restaurant()
+restaraunt.number_served = 9924
+print(f"\nNumber Served: {restaraunt.number_served}")
 
 another_restaraunt = Restaraunt("Chilis", "Fake Mexican or TexMex")
 another_restaraunt.describe_restaurant()
